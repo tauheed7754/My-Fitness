@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Fitness Tracker</h1>
+    </header>
+
+    <main>
+        <section class="activity-input">
+            <h2>Add New Activity</h2>
+            <form id="activityForm">
+                <div class="form-group">
+                    <label for="activityType">Activity Type:</label>
+                    <select id="activityType" required>
+                        <option value="">Select an activity</option>
+                        <option value="Running">Running</option>
+                        <option value="Weightlifting">Weightlifting</option>
+                        <option value="Cycling">Cycling</option>
+                        <option value="Swimming">Swimming</option>
+                        <option value="Yoga">Yoga</option>
+                        <option value="Walking">Walking</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration (minutes):</label>
+                    <input type="number" id="duration" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="calories">Calories Burned:</label>
+                    <input type="number" id="calories" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" rows="3"></textarea>
+                </div>
+                <button type="submit">Add Activity</button>
+            </form>
+        </section>
+
+        <section class="activity-list">
+            <h2>My Activities</h2>
+            <div id="activitiesContainer">
+                <!-- Activities will be loaded here by JavaScript -->
+                <p id="noActivitiesMessage">No activities logged yet. Add one above!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 By Tauheed</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
